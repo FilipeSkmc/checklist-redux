@@ -13,9 +13,9 @@ class ContactList extends Component {
           contacts.length === 0 ? (
             <p>Nenhum encontrado</p>
           ) : (
-            contacts.map(({name, phone}) => 
+            contacts.map(({name, phone}, index) => 
             (
-              <div>
+              <div key={index}>
                 <p>{`${name} - ${phone}`}</p>
               </div>
             ))
